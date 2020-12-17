@@ -173,7 +173,7 @@ The script used to generate new data is illustrated in the `data_augmentation.ip
 
 ### Training
 
-Our models are defined in the `model` folder. The `pipeline.ipynb` notebook can be used to train a new model, using the Keras module of Tensorflow. The model used for our final submission has been trained using the data augmentated folders `hard_mix`, `rotation`, `mix` and `flip`, for a total of 900 images. The Adam optimizer was used along with the focal Tversky loss, defined in `helpers/loss_functions.py`, with $\alpha = 0.6$ and $\gamma = 0.75$. Both `EarlyStopping` and `ReduceLROnPlateau` callbacks were set on 250 epochs.
+Our models are defined in the `model` folder. The `pipeline.ipynb` notebook can be used to train a new model, using the Keras module of Tensorflow. The model used for our final submission has been trained using the data augmentated folders `hard_mix`, `rotation`, `mix` and `flip`, for a total of 900 images. The Adam optimizer was used along with the focal Tversky loss, defined in `helpers/loss_functions.py`, with alpha = 0.6 and gamma = 0.75. Both `EarlyStopping` and `ReduceLROnPlateau` callbacks were set on 250 epochs.
 
 ### Submission
 
