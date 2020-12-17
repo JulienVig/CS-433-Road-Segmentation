@@ -39,7 +39,7 @@ First install the required libraries and packages used in this project. You can 
 pip install numpy==1.16.0
 pip install -r requirements.txt
 ```
-or use a virtual environment (obviously not nested in another conda environment):
+or use a virtual environment (make sure that it is not nested in another conda environment):
 ```
 pip install virtualenv
 virtualenv venv_tbh
@@ -60,6 +60,7 @@ ipykernel install --user --name=venv_tbh
 ```
 The last line creates a kernel for jupyter, in order to use the virtual environment in the notebooks. To do so, change your kernel, once the notebook running, by selecting the dropdown menu `Kernel`>`Change kernel`>`venv_tbh`.
 
+This setup has been tested on a variety of machines, but there might be cases that we have not thought about. If something goes wrong, it is always possible to manually install the dependencies as described in requirements.txt. It might even work on your default Python environment, just make sure that the Tensorflow version is alright.
 
 The setup is done and all is left is to create the predictions on the test set:
 ```
