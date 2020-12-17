@@ -15,8 +15,8 @@
     </tr>
 </table>
 
-In the context of the [EPFL Road Segmentation AICrowd challenge](https://www.aicrowd.com/challenges/epfl-ml-road-segmentation), our goal is to create a machine learning model that labels every 16x16 patches as either `road` or `background` on satellite images from GoogleMaps. The dataset is composed of 100 training images along with their respective grountruths and the 50-image test set whose predictions are to be submitted on AICrowd. 
-For that, we trained a U-Net model that predicts each pixel's class as well as a Convolutional Neural Network trained to output a 2D-grid of labels: one for each patch of the image. In the end the U-Net, trained using heavy data augmentation, was more performant and is used for our final AICrowd submission ([#109366](https://www.aicrowd.com/challenges/epfl-ml-road-segmentation/submissions/109366)), reaching 90% of F1 score and 94.5% of accuracy.
+In the context of the [EPFL Road Segmentation AICrowd challenge](https://www.aicrowd.com/challenges/epfl-ml-road-segmentation), our goal is to create a machine learning model that labels every 16x16 patches as either `road` or `background` on satellite images from GoogleMaps. The dataset is composed of 100 training images along with their respective ground truths and the 50-image test set whose predictions are to be submitted on AICrowd. 
+For that, we trained a U-Net model that predicts each pixel's class as well as a Convolutional Neural Network trained to output a 2D-grid of labels: one for each patch of the image. In the end the U-Net, trained using heavy data augmentation, was more performant and is used for our final AICrowd submission ([#109366](https://www.aicrowd.com/challenges/epfl-ml-road-segmentation/submissions/109366)), reaching an F1 of 90% score and an accuracy of 94.5%.
 
 ### Team members
 * Julien Benhaim
@@ -36,9 +36,10 @@ For that, we trained a U-Net model that predicts each pixel's class as well as a
 
 First install the required libraries and packages used in this project. You can either install everything directly with:
 ```
+pip install numpy==1.16.0
 pip install -r requirements.txt
 ```
-or use a virtual environment (obviously not nested in another conda environment):
+or use a virtual environment (make sure that it is not nested in another conda environment):
 ```
 pip install virtualenv
 virtualenv venv_tbh
@@ -53,12 +54,13 @@ venv_tbh\scripts\activate.bat
 ```
 Finally install the dependencies
 ```
-pip install numpy
+pip install numpy==1.16.0
 pip install -r requirements.txt
 ipykernel install --user --name=venv_tbh
 ```
 The last line creates a kernel for jupyter, in order to use the virtual environment in the notebooks. To do so, change your kernel, once the notebook running, by selecting the dropdown menu `Kernel`>`Change kernel`>`venv_tbh`.
 
+This setup has been tested on a variety of machines, but there might be cases that we have not thought about. If something goes wrong, it is always possible to manually install the dependencies as described in requirements.txt. It might even work on your default Python environment, just make sure that the Tensorflow version is alright.
 
 The setup is done and all is left is to create the predictions on the test set:
 ```
@@ -154,10 +156,9 @@ Here are the main subfolders description:
     saved_models is the folder used to store the trained models using the Keras module from Tensorflow.
 </details>
 
+## Training
 
-## Training pipeline
-
-Here is described the pipeline used to train the model and fine tune the hyperparameters of our final model.
+Here is the description of the pipeline used to train the model and fine tune the hyperparameters of our final model.
 
 * [Data augmentation](#data-augmentation)
 * [Training](#training)
