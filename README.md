@@ -36,9 +36,10 @@ For that, we trained a U-Net model that predicts each pixel's class as well as a
 
 First install the required libraries and packages used in this project. You can either install everything directly with:
 ```
+pip install numpy==1.16.0
 pip install -r requirements.txt
 ```
-or use a virtual environment (obviously not nested in another conda environment):
+or use a virtual environment (make sure that it is not nested in another conda environment):
 ```
 pip install virtualenv
 virtualenv venv_tbh
@@ -53,12 +54,13 @@ venv_tbh\scripts\activate.bat
 ```
 Finally install the dependencies
 ```
-pip install numpy
+pip install numpy==1.16.0
 pip install -r requirements.txt
 ipykernel install --user --name=venv_tbh
 ```
 The last line creates a kernel for jupyter, in order to use the virtual environment in the notebooks. To do so, change your kernel, once the notebook running, by selecting the dropdown menu `Kernel`>`Change kernel`>`venv_tbh`.
 
+This setup has been tested on a variety of machines, but there might be cases that we have not thought about. If something goes wrong, it is always possible to manually install the dependencies as described in requirements.txt. It might even work on your default Python environment, just make sure that the Tensorflow version is alright.
 
 The setup is done and all is left is to create the predictions on the test set:
 ```
@@ -154,8 +156,7 @@ Here are the main subfolders description:
     saved_models is the folder used to store the trained models using the Keras module from Tensorflow.
 </details>
 
-
-## Training pipeline
+## Training
 
 Here is the description of the pipeline used to train the model and fine tune the hyperparameters of our final model.
 
