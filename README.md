@@ -15,8 +15,8 @@
     </tr>
 </table>
 
-In the context of the [EPFL Road Segmentation AICrowd challenge](https://www.aicrowd.com/challenges/epfl-ml-road-segmentation), our goal is to create a machine learning model that labels every 16x16 patches as either `road` or `background` on satellite images from GoogleMaps. The dataset is composed of 100 training images along with their respective grountruths and the 50-image test set whose predictions are to be submitted on AICrowd. 
-For that, we trained a U-Net model that predicts each pixel's class as well as a Convolutional Neural Network trained to output a 2D-grid of labels: one for each patch of the image. In the end the U-Net, trained using heavy data augmentation, was more performant and is used for our final AICrowd submission ([#109366](https://www.aicrowd.com/challenges/epfl-ml-road-segmentation/submissions/109366)), reaching 90% of F1 score and 94.5% of accuracy.
+In the context of the [EPFL Road Segmentation AICrowd challenge](https://www.aicrowd.com/challenges/epfl-ml-road-segmentation), our goal is to create a machine learning model that labels every 16x16 patches as either `road` or `background` on satellite images from GoogleMaps. The dataset is composed of 100 training images along with their respective ground truths and the 50-image test set whose predictions are to be submitted on AICrowd. 
+For that, we trained a U-Net model that predicts each pixel's class as well as a Convolutional Neural Network trained to output a 2D-grid of labels: one for each patch of the image. In the end the U-Net, trained using heavy data augmentation, was more performant and is used for our final AICrowd submission ([#109366](https://www.aicrowd.com/challenges/epfl-ml-road-segmentation/submissions/109366)), reaching an F1 of 90% score and an accuracy of 94.5%.
 
 ### Team members
 * Julien Benhaim
@@ -157,7 +157,7 @@ Here are the main subfolders description:
 
 ## Training pipeline
 
-Here is described the pipeline used to train the model and fine tune the hyperparameters of our final model.
+Here is the description of the pipeline used to train the model and fine tune the hyperparameters of our final model.
 
 * [Data augmentation](#data-augmentation)
 * [Training](#training)

@@ -45,9 +45,9 @@ def download_model(model_name, save_dir, files):
 #     drive.mount('/content/drive')
 #     drive_path = '/content/drive/Shareddrives/ML_Road_Segmentation/CS-433-project-2-{name}/project_road_segmentation'
 #     os.chdir(drive_path)
-#     from helpers.colab import mount_and_pull
+#     from helpers.colab import pull
 #     BRANCH_NAME = 'name_of_your_branch'
-#     mount_and_pull(BRANCH_NAME)
+#     pull(BRANCH_NAME)
 #
 # And these lines after saving your model to download it on your local system
 # (MODEL_NAME and the save directory should be set in the Notebook)
