@@ -42,7 +42,17 @@ or use a virtual environment:
 ```
 pip install virtualenv
 virtualenv venv_tbh
+```
+For Linux and Mac OS
+```
 source venv_tbh/bin/activate
+```
+For windows
+```
+venv_tbh\scripts\activate.bat 
+```
+Finally install the dependencies
+```
 pip install -r requirements.txt
 ipykernel install --user --name=venv_tbh
 ```
