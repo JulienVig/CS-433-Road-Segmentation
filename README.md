@@ -38,7 +38,7 @@ First install the required libraries and packages used in this project. You can 
 ```
 pip install -r requirements.txt
 ```
-or use a virtual environment:
+or use a virtual environment (obviously not nested in another conda environment):
 ```
 pip install virtualenv
 virtualenv venv_tbh
@@ -47,12 +47,13 @@ For Linux and Mac OS
 ```
 source venv_tbh/bin/activate
 ```
-For windows
+For Windows
 ```
 venv_tbh\scripts\activate.bat 
 ```
 Finally install the dependencies
 ```
+pip install numpy
 pip install -r requirements.txt
 ipykernel install --user --name=venv_tbh
 ```
