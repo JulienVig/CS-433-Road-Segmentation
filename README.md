@@ -15,6 +15,14 @@
     </tr>
 </table>
 
+| |Overview  | 
+| - | - |
+|Course| CS-433 Machine Learning|
+| Year | Autumn 2020 |
+| Final Grade | **5.5** / 6 |
+| Languages | Python, TensorFlow Keras |
+| Team size | 3 |
+
 In the context of the EPFL CS-433 Machine Learning AICrowd challenge in which I achieved a final grade of **5.5** on a 1 to 6 scale. our goal is to create a machine learning model that labels every 16x16 patches as either `road` or `background` on satellite images from GoogleMaps. The dataset is composed of 100 training images along with their respective ground truths and the 50-image test set whose predictions are to be submitted on AICrowd. 
 For that, we trained a U-Net model that predicts each pixel's class as well as a Convolutional Neural Network trained to output a 2D-grid of labels: one for each patch of the image. Both are implemented in TensorFlow Keras. In the end the U-Net, trained using heavy data augmentation, was more performant and is used for our final AICrowd submission, reaching an F1 of 90% score and an accuracy of 94.5%. The detailed explanations are described in this [report](../master/report.pdf).
 
